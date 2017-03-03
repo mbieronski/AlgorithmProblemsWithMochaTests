@@ -31,4 +31,5 @@ function LongestWord(sen) {
 return longestWord;
 }
 
-LongestWord("Toast is the best fluffiest fooffiest cat in the whole world");
+module.exports = LongestWord;
+//LongestWord("Toast is the best fluffiest fooffiest cat in the whole world");
