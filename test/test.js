@@ -9,7 +9,6 @@ var longestWord = require('./../longestWord');
       assert.equal('further', longestWord('this is further than once'));
     });
     it('should return the first word if there are two longest words', function(){
-    	console.log(longestWord('toast'))
     	assert.equal('toast', longestWord('it is toast a great cat'));
     });
   });
