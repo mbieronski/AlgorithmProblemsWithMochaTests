@@ -23,5 +23,6 @@ var Palindrome = require('./../1-Palindrome');
     });
     it('should return false if not a valid palindrome', function(){
       assert.equal(false, Palindrome('houses'));
+      assert.equal(false, Palindrome('radars'));
     });
   });
