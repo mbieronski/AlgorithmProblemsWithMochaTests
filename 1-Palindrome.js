@@ -5,12 +5,17 @@
 // Punctuation and numbers will not be part of the string. 
 //
 
-function Palindrome(str){
-
-
-
-
-
+function Palindrome(str) {
+    
+    str = str.toLowerCase();
+    backwards = ((str.split("")).reverse()).join("");
+    
+    if (str === backwards) {
+        return true;
+    }
+    else {
+        return false;
+    }
 
 }
 
