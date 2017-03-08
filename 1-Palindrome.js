@@ -5,12 +5,20 @@
 // Punctuation and numbers will not be part of the string. 
 //
 
-function Palindrome(str){
+function Palindrome(str) {
+    if (str === "") {
+        return "false";
+    }
 
-
-
-
-
+    str = str.toLowerCase().replace(/[ ]/g,"");
+    var backwards = str.split("").reverse().join("");
+    
+    if (str === backwards) {
+        return "true";
+    }
+    else {
+        return "false";
+    }
 
 }
 

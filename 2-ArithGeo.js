@@ -8,12 +8,46 @@
 
 
 function ArithGeo(arr){
-
-
-
-
-
-
+    var answer;
+    
+    if(arr.length <= 2) {
+        answer = -1;
+    }
+    
+    var jumpA = arr[1] - arr[0];
+    var jumpB = arr[1] / arr[0];
+    
+    
+    for (i=1; i < (arr.length-1); i++) {
+        
+        if ( arr[i+1] - arr[i] === jumpA ) {
+            for (i=2; i < (arr.length-1); i++) {
+                if ( arr[i+1] - arr[i] === jumpA ) {
+                    answer = "Arithmetic";
+                }
+                else {
+                    answer = -1;
+                }
+            }
+        }
+        
+        else if( arr[i+1] / arr[i] === jumpB ) {
+            for(i=2; i < (arr.length-1); i++) {
+                if ( arr[i+1] / arr[i] === jumpB) {
+                    answer = "Geometric";
+                }
+                else {
+                    answer = -1;
+                }
+            }
+        }
+        
+        else {
+            answer = -1;
+        }
+    }
+    
+    return answer;
 
 }
 

@@ -28,15 +28,15 @@ var HammingDistance = require('./../11-HammingDistance');
 //1-Palindrome
   describe('1. Palindrome', function() {
     it('should return true if valid palindrome', function(){
-      assert.equal(true, Palindrome('racecar'));
-      assert.equal(true, Palindrome('race car'));
-      assert.equal(true, Palindrome('three si x ninxis eer ht'));
-      assert.equal(true, Palindrome('g'));
+      assert.equal("true", Palindrome('racecar'));
+      assert.equal("true", Palindrome('race car'));
+      assert.equal("true", Palindrome('three si x ninxis eer ht'));
+      assert.equal("true", Palindrome('g'));
     });
     it('should return false if not a valid palindrome', function(){
-      assert.equal(false, Palindrome('houses'));
-      assert.equal(false, Palindrome('radars'));
-      assert.equal(false, Palindrome(''));
+      assert.equal("false", Palindrome('houses'));
+      assert.equal("false", Palindrome('radars'));
+      assert.equal("false", Palindrome(''));
     });
   });
 
