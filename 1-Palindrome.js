@@ -6,15 +6,18 @@
 //
 
 function Palindrome(str) {
-    
-    str = str.toLowerCase();
-    backwards = ((str.split("")).reverse()).join("");
+    if (str === "") {
+        return "false";
+    }
+
+    str = str.toLowerCase().replace(/[ ]/g,"");
+    var backwards = str.split("").reverse().join("");
     
     if (str === backwards) {
-        return true;
+        return "true";
     }
     else {
-        return false;
+        return "false";
     }
 
 }
