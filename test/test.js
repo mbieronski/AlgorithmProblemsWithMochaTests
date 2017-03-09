@@ -127,7 +127,7 @@ var HammingDistance = require('./../11-HammingDistance');
     it('should return \'false\' if num is not a power of two', function(){
       assert.equal('false', PowersofTwo(7));
       assert.equal('false', PowersofTwo(3));
-      assert.equal('false', PowersofTwo(128));
+      assert.equal('false', PowersofTwo(130));
       assert.equal('false', PowersofTwo(34));
     });
   });

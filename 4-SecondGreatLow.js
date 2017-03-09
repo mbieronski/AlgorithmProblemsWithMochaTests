@@ -7,11 +7,39 @@
 
 function SecondGreatLow(arr){
 
+    arr = arr.sort(function(a, b){return a-b});
+    
+    if (arr.length === 2) {
+        
+        secondL = arr[1];
+        secondG = arr[0];
 
+    }
 
-
-
-
+    if (arr.length > 2) {
+        var foundG = false;
+        var foundL = false;
+        
+        for (i = 0; i <= arr.length-2; i++) {
+        
+            if (arr[i] > arr[0] && foundL === false) {
+                var secondL = arr[i];
+                foundL = true;
+            }
+        }
+    
+        for (i = arr.length-2; i >= 0; i--) {
+            
+            if (arr[i] < arr[arr.length-1] && foundG === false) {
+                var secondG = arr[i];
+                foundG = true;
+            }
+        
+        }
+    }
+    
+    var answers = [secondL, secondG].join(" ");
+    return answers;
 
 }
 
