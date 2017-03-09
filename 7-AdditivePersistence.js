@@ -7,13 +7,48 @@
 
 
 function AdditivePersistence(num){
+    var total = 0;
+    var singleDigit = false;
+    var addP = 0;
+    
+    //  Turns integer num into array of strings
+    var numArray = num.toString().split("");
+    
+    // Turns each string in num array back into integers
+    for (i = 0; i <numArray.length; i++) { // switch to i= thing
+        numArray[i] = parseInt(numArray[i]);
+    }
+    
+    if (numArray.length === 1) {
+        return 0;
+    }
+    
+    while (singleDigit === false) {
+        
+        for (i=0; i < numArray.length; i++) {
+            total = total + numArray[i];
+            
+        }
 
+        
+        
+        if (total > 10) {
+            numArray = total.toString().split("");
+                for (i = 0; i <numArray.length; i++) {
+                    numArray[i] = parseInt(numArray[i]);
+                }
+            total = 0;
+            addP++;
+        }
+        
+        else if (total <= 9) {
+            singleDigit = true;
+            addP++;
+        }
+        
+    }
 
-
-
-
-
-
+    return addP;
 
 }
 
