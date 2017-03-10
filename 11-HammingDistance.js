@@ -11,15 +11,20 @@
 
 function HammingDistance(strArr){
 
-
-
-
-
-
+    var hd = 0;
+    
+    for (i=0; i < strArr[0].length; i++) {
+        
+        if (strArr[0][i] != strArr[1][i]) {
+            hd++;
+        } 
+        
+    }
+    
+    return hd;
 
 
 }
-
 
 
 

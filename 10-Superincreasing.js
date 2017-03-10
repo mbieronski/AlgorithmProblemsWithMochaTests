@@ -7,16 +7,21 @@
 
 
 
-
 function Superincreasing(arr){
-
-
-
-
-
-
-
-
+    
+    var total = 0;
+    
+    for (i=0; i < arr.length; i++) {
+        
+        total = total+ arr[i];
+        
+        if (arr[i+1] <= total) {
+            return "false";   
+        }
+        
+    }
+    
+    return "true";
 
 }
 

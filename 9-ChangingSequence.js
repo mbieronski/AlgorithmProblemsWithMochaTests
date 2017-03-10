@@ -12,12 +12,37 @@
 
 
 function ChangingSequence(arr){
-
-
-
-
-
-
+    
+    // decide if array starts out by increasing or decreasing
+    var increasing;
+    
+    if (arr[0] < arr[1]) {
+        increasing = true;
+    }
+    else {
+        increasing = false;
+    }
+    
+    // if array starts by increasing
+    if (increasing === true) {
+        for (i=1; i < arr.length; i++) {
+            if (arr[i] > arr[i+1]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    // if array starts by decreasing
+    else if (increasing === false) {
+        
+        for (i=1; i < arr.length; i++) {
+            if (arr[i] < arr[i+1]) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }
 

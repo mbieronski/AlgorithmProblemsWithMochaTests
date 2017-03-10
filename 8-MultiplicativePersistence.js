@@ -7,13 +7,47 @@
 
 
 function MultiplicativePersistence(num){
+    
+    num = String(num).split("");
+    
+    if (num.length === 1) {
+        return 0;
+    }
+    
+    for (i=0; i < num.length; i++) {
+        num[i] = parseInt(num[i]);
+    }
+    
+    var isSingle = false;
+    var mP = 0;
+    
+    while (isSingle === false) {
+        
+        var total = 1;
+        
+        if (num.length > 1) {
+            
+            for (i=0; i < num.length; i++) {
+                total = total * num[i];
+            }
+            
+            num = String(total).split("");
 
+            for (i=0; i < num.length; i++) {
+                num[i] = parseInt(num[i]);
+            }
+            
+            //set count up 1
+            mP++;
 
-
-
-
-
-
+        }
+        
+        else {
+            isSingle = true;
+            return mP;
+        }
+        
+    }
 
 }
 
