@@ -171,7 +171,7 @@ var HammingDistance = require('./../11-HammingDistance');
       assert.equal('false', Superincreasing([3,6,8,21,59]));
       assert.equal('false', Superincreasing([0,4,6,9]));
       assert.equal('false', Superincreasing([1,3,8,23,57,199,243]));
-      ssert.equal('false', Superincreasing([5,4,6,19]));
+      assert.equal('false', Superincreasing([5,4,6,19]));
     });
   });   
 
