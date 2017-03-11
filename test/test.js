@@ -12,7 +12,7 @@ var Superincreasing = require('./../10-Superincreasing');
 var HammingDistance = require('./../11-HammingDistance');
  
 
-//1-Palindrome
+//1-Palindrome-1
   describe('1. Palindrome', function() {
     it('should return true if valid palindrome', function(){
       assert.equal("true", Palindrome('racecar'));
