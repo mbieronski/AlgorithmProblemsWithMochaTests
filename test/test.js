@@ -10,7 +10,19 @@ var MultiplicativePersistence = require('./../8-MultiplicativePersistence');
 var ChangingSequence = require('./../9-ChangingSequence');
 var Superincreasing = require('./../10-Superincreasing');
 var HammingDistance = require('./../11-HammingDistance');
- 
+//
+var RectangleArea = require('./../12-RectangleArea');
+var BitwiseOne = require('./../13-BitwiseOne');
+var OtherProducts = require('./../14-OtherProducts');
+var ArrayMatching = require('./../15-ArrayMatching');
+var BinaryReversal = require('./../16-BinaryReversal');
+var NextPalindrome = require('./../17-NextPalindrome');
+var TwoSum = require('./../18-TwoSum');
+var BitwiseTwo = require('./../19-BitwiseTwo');
+var PowerSetCount = require('./../20-PowerSetCount');
+var ProductDigits = require('./../21-ProductDigits');
+//
+
 
 //1-Palindrome
 
@@ -188,3 +200,147 @@ var HammingDistance = require('./../11-HammingDistance');
     });
   }); 
 
+//12-RectangleArea
+  describe('12. RectangleArea', function() {
+    it('should return the area of a given rectangle', function(){
+      assert.equal(6, RectangleArea(["(0,0", "(3,0)", "(0,2)", "(3,2)"]));
+      assert.equal(4, RectangleArea(["(1 1)","(1 3)","(3 1)","(3 3)"]));
+      assert.equal(1, RectangleArea(["(-1 -1)","(0 0)","(-1 0)","(0 -1)"]));
+      assert.equal(64, RectangleArea(["(0 0)","(8 8)","(0 8)","(8 0)"]));
+      assert.equal(15, RectangleArea(["(0 0)","(5 0)","(0 3)","(5 3)"]));
+      assert.equal(1, RectangleArea(["(0 0)","(1 0)","(1 1)","(0 1)"]));
+    });
+    
+  });
+
+
+//13-BitwiseOne
+  describe('13. BitwiseOne', function() {
+    it('should return the binary result of an OR operation', function(){
+      assert.equal("1101", BitwiseOne(["1001", "0100"]));
+      assert.equal("100", BitwiseOne(["100", "000"]));
+      assert.equal("01011", BitwiseOne(["00011", "01010"]));
+      assert.equal("1111111", BitwiseOne(["1111110","0000001"]));
+      assert.equal("101010111", BitwiseOne(["101010101","000000011"]));
+      assert.equal("000", BitwiseOne(["000","000"]));
+      assert.equal("1", BitwiseOne(["0","1"]));
+    });
+    
+  });
+
+//14-OtherProducts
+  describe('14. OtherProducts', function() {
+    it('should return the products of all other elements in an array separated by a hyphen', function(){
+      assert.equal("1-1-1", OtherProducts([1,1,1]));
+      assert.equal("8-8-8-8", OtherProducts([2,2,2,2]));
+      assert.equal("120-60-40-30-24", OtherProducts([1,2,3,4,5]));
+      assert.equal("1368-342-228-72-456", OtherProducts([1,4,6,19,3]));
+      assert.equal("1024-512-256-128-64", OtherProducts([1,2,4,8,16]));
+      assert.equal("6-1", OtherProducts([1,6]));
+      assert.equal("3-2-6-6", OtherProducts([2,3,1,1]));
+    });
+    
+  });
+
+//15-ArrayMatching
+  describe('15. ArrayMatching', function() {
+    it('should return the sums of elements in two arrays of the same length', function(){
+      assert.equal("6-4-13-17", ArrayMatching(["[1, 2, 5, 6]", "[5, 2, 8, 11]"]));
+      assert.equal("2-20-24", ArrayMatching(["[1, 10, 12]", "[1, 10, 12]"]));
+    });
+    it('should return the sums of elements in two arrays of different lengths', function(){
+      assert.equal("9-7-7-7", ArrayMatching(["[7, 7, 7, 7]", "[2]"]));
+      assert.equal("7-4-6-10-6", ArrayMatching(["[5, 2, 3]", "[2, 2, 3, 10, 6]"]));
+      assert.equal("3-3-6-2", ArrayMatching(["[1, 2, 1]", "[2, 1, 5, 2]"]));
+      assert.equal("3-1", ArrayMatching(["[2]", "[1, 1]"]));
+      assert.equal("6-8-12-1-5-3", ArrayMatching(["[1, 2, 10]", "[5, 6, 2, 1, 5, 3]"]));
+    });
+    
+  });
+
+
+//16-BinaryReversal
+  describe('16. BinaryReversal', function() {
+    it('should return the decimal string of a reversed binary number from decimal input', function(){
+      assert.equal("60296", BinaryReversal("4567"));
+      assert.equal("39948", BinaryReversal("12345"));
+      assert.equal("13796", BinaryReversal("10156"));
+      assert.equal("244", BinaryReversal("47"));
+      assert.equal("9226807", BinaryReversal("15487793"));
+      assert.equal("128", BinaryReversal("1"));
+      assert.equal("80", BinaryReversal("10"));
+    });
+    
+  });
+
+//17-NextPalindrome
+  describe('17. NextPalindrome', function() {
+    it('should return the next highest number that is a palindrome', function(){
+      assert.equal(33, NextPalindrome(24));
+      assert.equal(3, NextPalindrome(2));
+      assert.equal(181, NextPalindrome(180));
+      assert.equal(101, NextPalindrome(99));
+      assert.equal(505, NextPalindrome(504));
+      assert.equal(494, NextPalindrome(490));
+      assert.equal(66, NextPalindrome(57));
+    });
+    
+  });
+
+//18-TwoSum
+  describe('18. TwoSum', function() {
+    it('should return the element pair(s) that add up to the first element', function(){
+      assert.equal("5,2 -4,11", TwoSum([7, 3, 5, 2, -4, 8, 11]));
+      assert.equal("5,4", TwoSum([9, 5, 4, 2, 6, 1]));
+      assert.equal("6,1 4,3", TwoSum([7, 6, 4, 1, 7, -2, 3, 12]));
+      assert.equal("6,11 10,7 15,2", TwoSum([17, 4, 5, 6, 10, 11, 4, -3, -5, 3, 15, 2, 7]));
+      assert.equal("12,9", TwoSum([21, 10, 12, 4, 6, 3, 3, 7, 8, 9]));
+    });
+    it('should return -1 if no pairs add up to the first element', function(){
+      assert.equal(-1, TwoSum([6, 2]));
+      assert.equal(-1, TwoSum([100, 90, 90, 90, 90, 11]));
+    });
+    
+  });
+
+//19-BitwiseTwo
+  describe('19. BitwiseTwo', function() {
+    it('should return the binary result of an AND operation', function(){
+      assert.equal("00101", BitwiseTwo(["10111", "01101"]));
+      assert.equal("000", BitwiseTwo(["100", "000"]));
+      assert.equal("0", BitwiseTwo(["1","0"]));
+      assert.equal("000000001", BitwiseTwo(["101010101","000000011"]));
+      assert.equal("0100", BitwiseTwo(["1100","0111"]));
+      assert.equal("0000", BitwiseTwo(["0011","1100"]));
+      assert.equal("111", BitwiseTwo(["111","111"]));
+    });
+    
+  });
+
+//20-PowerSetCount
+  describe('20. PowerSetCount', function() {
+    it('should return the correct number of possible sets', function(){
+      assert.equal(2, PowerSetCount([5]));
+      assert.equal(4, PowerSetCount([1, 2]));
+      assert.equal(8, PowerSetCount([7, 6, 4]));
+      assert.equal(64, PowerSetCount([10, 11, 12, 13, 14, 15]));
+      assert.equal(128, PowerSetCount([1, 2, 3, 4, 5, 6, 7]));
+      assert.equal(256, PowerSetCount([1, 2, 3, 4, 5, 6, 7, 8]));
+      assert.equal(512, PowerSetCount([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+    });
+    
+  });
+
+//21-ProductDigits
+  describe('21. ProductDigits', function() {
+    it('should return the fewest number of digits you need to produce the input number via multiplication', function(){
+      assert.equal(2, ProductDigits(24));
+      assert.equal(3, ProductDigits(90));
+      assert.equal(2, ProductDigits(6));
+      assert.equal(3, ProductDigits(23));
+      assert.equal(4, ProductDigits(5000));
+      assert.equal(3, ProductDigits(79));
+      assert.equal(2, ProductDigits(72));
+    });
+    
+  });
