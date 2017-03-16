@@ -25,7 +25,6 @@ var ProductDigits = require('./../21-ProductDigits');
 
 
 //1-Palindrome
-
   describe('1. Palindrome', function() {
     it('should return true if valid palindrome', function(){
       assert.equal("true", Palindrome('racecar'));
@@ -331,7 +330,7 @@ var ProductDigits = require('./../21-ProductDigits');
     
   });
 
-//21-ProductDigits
+//21-ProductDigits//
   describe('21. ProductDigits', function() {
     it('should return the fewest number of digits you need to produce the input number via multiplication', function(){
       assert.equal(2, ProductDigits(24));
@@ -341,6 +340,5 @@ var ProductDigits = require('./../21-ProductDigits');
       assert.equal(4, ProductDigits(5000));
       assert.equal(3, ProductDigits(79));
       assert.equal(2, ProductDigits(72));
-    });
-    
+    });  
   });
