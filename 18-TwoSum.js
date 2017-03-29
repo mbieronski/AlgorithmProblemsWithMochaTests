@@ -13,15 +13,34 @@
 // in the array, return the number -1 
 
 
- function TwoSum(arr) {
+function TwoSum(arr) {
+     var newArray = [];
+     
+     // for each number in arr
+     for (i = 1; i < arr.length-1; i++) {
+         
+         // check to see if arr[i] + arr[i+x] is equal to first number
+         for (x = 1; x < arr.length-2; x++) {
+            
+            //console.log(arr[i],arr[i+x]);         
+             if (arr[i] + arr[i+x] === arr[0]) {
+                 //console.log(arr[i],arr[i+x]);
+                 newArray.push([arr[i],arr[i+x]]);
+             }
+         }
+     }
+     
+     for (a = 0; a < newArray.length; a++) {
+         newArray[a] = newArray[a].join(",");
+     }
+     
+     if (newArray.length === 0) {
+         return -1;
+     }
+     
+     return newArray.join(" ");
 
-
-
-
-
-
-
- }
+}
 
 
  module.exports = TwoSum;
