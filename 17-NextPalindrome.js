@@ -9,13 +9,43 @@
 
 function NextPalindrome(num) {
 
+    var reversedNum = [];
+    
+    // function to reverse string
+    function reverse(x) {
+        reversedNum = [];
+        
+        // turn integer to array of strings
+        x = x.toString();
+        x = x.split("");
+        
+        // reverse array
+        for (var i = 0; i < x.length; i++) {
+            reversedNum[i] = x[x.length-1-i];
+        }
+        
+        // join array back into one string and turn into integer
+        reversedNum = reversedNum.join("");
+        reversedNum = parseInt(reversedNum);
 
+    }
 
-
-
-
-
-
+    reverse(num);
+    
+    if (num < 9) {
+        return num + 1;
+    }
+    
+    else if (num === reversedNum) {
+        num = num + 1;
+    }
+    
+    while (num !== reversedNum) {
+        num = num + 1;
+        reverse(num);
+    }
+    
+    return num;
 }
 
 
