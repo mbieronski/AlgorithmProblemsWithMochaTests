@@ -14,13 +14,27 @@
 
 function OtherProducts(arr) {
 
-
-
-
-
-
-
-
+    var newArray = [];
+    var totalProduct = 1;
+    
+    // find total product of numbers in arr
+    for (i=0; i < arr.length; i++) {
+        
+        totalProduct = totalProduct * arr[i];
+        
+    }
+    
+    // create new array by dividing product by current location in arr's number
+    for (i = 0; i < arr.length; i++) {
+        
+        newArray.push(totalProduct / arr[i]);
+        
+    }
+    
+    newArray = newArray.join("-");
+    
+    return newArray;
+    
 }
 
 

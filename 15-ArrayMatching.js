@@ -21,11 +21,66 @@
 
 function ArrayMatching(strArr) {
 
+//console.log(strArr);
+    
+    // first convert strings to arrays
+    for (var a = 0; a < 2; a++) {
+        strArr[a] = strArr[a].replace(/ /g,"").replace("[","").replace("]","");
+        strArr[a] = strArr[a].split(",");
+        for (var b=0; b<strArr[a].length; b++) {
+            strArr[a][b] = parseInt(strArr[a][b]);
+        }
+    }
+    //console.log(strArr);
 
 
+    // if unequal lengths
+    if (strArr[0].length !== strArr[1].length) {
+        
+        // find out which is longer
+        if (strArr[0].length < strArr[1].length) {
+            var shorter = strArr[0];
+            var longer = strArr[1];
+        }
+        
+        else {
+            var shorter = strArr[1];
+            var longer = strArr[0];
+        }
+        
+    }
+    
+    // if equal lengths
+    if (strArr[0].length === strArr[1].length) {
+        
+        var shorter = strArr[1];
+        var longer = strArr[0];
+        
+    }
+    
+    var newArray = [];
+        
+    for (var i=0; i < shorter.length; i++) {
+        
+        newArray.push(shorter[i]+longer[i]);
 
-
-
+    }
+    
+    if (longer.length > shorter.length) {
+        
+        var numLonger = longer.length - shorter.length;
+        
+        for (var x = 0; x < numLonger; x++) {
+            newArray.push(longer[shorter.length + x]);
+        }
+        
+    }
+    
+    //console.log(newArray);
+     
+    newArray = newArray.join("-");
+    
+    return newArray;
 
 }
 
