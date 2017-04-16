@@ -6,7 +6,7 @@
 // palindrome. 
 
 
-
+//change
 function NextPalindrome(num) {
 
     var reversedNum = [];
